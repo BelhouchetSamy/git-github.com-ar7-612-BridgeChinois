@@ -1,0 +1,19 @@
+import Controleur.ControleurMediateur;
+import Modele.Partie;
+import Vue.InterfaceGraphique;
+import Vue.InterfaceTextuelle;
+
+class BridgeChinois {
+
+    public static void main(String[] args) {
+        try {
+            Partie j = new Partie();
+            ControleurMediateur c = new ControleurMediateur(j);
+            InterfaceGraphique ig = new InterfaceGraphique(j,c);
+            ig.setVisible(true);
+            //InterfaceTextuelle.demarrer(j, c);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
